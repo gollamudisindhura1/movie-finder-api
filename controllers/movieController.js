@@ -1,5 +1,4 @@
-require ("dotenv").config()
-const omdbClient = require ("../services/api-client")
+const omdbClient = require ("../services/api-clients")
 
 
 //Get/api/search?title=batman
@@ -32,7 +31,7 @@ async function searchMovies(req, res) {
 async function getMovieDetails(req, res) {
     try{
 
-        const movieId = req.params.movieId
+        const movieId = req.params.id
         const response = await omdbClient.get("/", {
             params: {
                 i: movieId,

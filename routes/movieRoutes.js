@@ -11,4 +11,4 @@ router.get("/search", movieController.searchMovies);
 
 router.get("/movies/:id", movieController.getMovieDetails)
 
-module.exports = {router}
+module.exports = router
